@@ -14,17 +14,21 @@ $version = time();
         <link rel="stylesheet" href="css/default.css?<?php echo $version; ?>" type="text/css" media="all">
         <link rel="stylesheet" href="css/widget.css?<?php echo $version; ?>" type="text/css" media="all">
         <link rel="stylesheet" href="css/thumbsrate.css?<?php echo $version; ?>" type="text/css" media="all">
+        <link rel="stylesheet" href="css/author.css?<?php echo $version; ?>" type="text/css" media="all">
 
 
         <link rel="stylesheet" href="css/animate.css?ver=5.3.2" type="text/css" media="all">
 
         <link rel="stylesheet" href="css/responsive.css?<?php echo $version; ?>" type="text/css" media="all">
         <link rel="stylesheet" href="css/custom.css?<?php echo $version; ?>" type="text/css" media="all">
+        
+        <script type="text/javascript" src="https://maclife.vn/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
     </head>
     <body>
         <?php
         require_once 'header.php';
         require_once 'body.php';
+//        require_once 'detail.php';
         require_once 'footer.php';
         ?>
         <script type="text/javascript">
@@ -37,7 +41,6 @@ $version = time();
             var thumbs_rating_ajax = {"ajax_url": "http://front.maclife.localhost/html/ajax.php", "nonce": "97f4068092"};
             /* ]]> */
         </script>
-        <script type="text/javascript" src="https://maclife.vn/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
         <script type="text/javascript" src="https://maclife.vn/wp-content/themes/maclife/js/jquery.main.js?ver=5.3.2"></script>
         <script type="text/javascript" src="https://maclife.vn/wp-content/plugins/wp-tab-widget-pro.1/js/wp-tab-widget.js?ver=5.3.2"></script>
         <script type="text/javascript" src="https://maclife.vn/wp-content/plugins/thumbs-rating/js/general.js?ver=4.0.1"></script>
