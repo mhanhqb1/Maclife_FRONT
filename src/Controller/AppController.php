@@ -124,6 +124,7 @@ class AppController extends Controller {
 
         // Set common data
         $this->set('_settings', $this->_settings);
+        $this->set('_cates', $this->getCates());
 
         // Set default layout
         $this->setLayout();
@@ -167,5 +168,21 @@ class AppController extends Controller {
             }
         }
         return $params;
+    }
+    
+    // Get cates
+    public function getCates() {
+        $productCates = array();
+        $_tmp = !empty($this->_settings['cates']) ? $this->_settings['cates'] : array();
+        if (!empty($_tmp)) {
+            foreach ($_tmp as $c) {
+                if (empty($c['parent_id'])) {
+                    $productCates[$c['id']]['data'] = $c;
+                } else {
+                    $productCates[$c['parent_id']]['child_data'][$c['id']] = $c;
+                }
+            }
+        }
+        return $productCates;
     }
 }
