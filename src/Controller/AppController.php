@@ -36,7 +36,6 @@ class AppController extends Controller {
     public $controller = null;
 
     /** @var object $action Action name. */
-    public $action = null;
     public $session = null;
     public $current_url = '';
     public $BASE_URL = '';
@@ -61,7 +60,7 @@ class AppController extends Controller {
          * Enable the following components for recommended CakePHP security settings.
          * see https://book.cakephp.org/3.0/en/controllers/components/security.html
          */
-//        $this->loadComponent('Security');
+        $this->loadComponent('Security');
 //        $this->loadComponent('Csrf');
     }
 
@@ -114,14 +113,7 @@ class AppController extends Controller {
             $this->set('_serialize', true);
         }
 
-        $cart = array();
-        $sessionKey = Configure::read('Config.cartSessionKey');
-        if ($this->session->check($sessionKey)) {
-            $cart = $this->session->read($sessionKey);
-        }
-
         // Set common param
-        $this->set('cart', $cart);
         $this->set('session', $this->session);
         $this->set('cookie', $this->Cookie);
         $this->set('controller', $this->controller);
@@ -132,7 +124,6 @@ class AppController extends Controller {
 
         // Set common data
         $this->set('_settings', $this->_settings);
-        $this->set('productCates', $this->getProductCates());
 
         // Set default layout
         $this->setLayout();
@@ -144,10 +135,8 @@ class AppController extends Controller {
     public function setLayout() {
         if ($this->controller == 'ajax') {
             $this->viewBuilder()->layout('ajax');
-        } elseif ($this->controller == 'cart' && in_array($this->action, array('checkout', 'complete'))) {
-            $this->viewBuilder()->layout('checkout');
         } else {
-            $this->viewBuilder()->layout('lyona');
+            $this->viewBuilder()->layout('cg4vn');
         }
     }
 
@@ -160,22 +149,6 @@ class AppController extends Controller {
         $data = array();
         $data = Api::call(Configure::read('API.url_settings_general'), array());
         return $data;
-    }
-
-    // Get product cates
-    public function getProductCates() {
-        $productCates = array();
-        $_tmpPC = !empty($this->_settings['product_cates']) ? $this->_settings['product_cates'] : array();
-        if (!empty($_tmpPC)) {
-            foreach ($_tmpPC as $pc) {
-                if (empty($pc['parent_id'])) {
-                    $productCates[$pc['id']]['data'] = $pc;
-                } else {
-                    $productCates[$pc['parent_id']]['child_data'][$pc['id']] = $pc;
-                }
-            }
-        }
-        return $productCates;
     }
 
     /**
@@ -195,55 +168,4 @@ class AppController extends Controller {
         }
         return $params;
     }
-
-    /**
-     * Cart format
-     */
-    public function formatCart($cart) {
-        $total = 0;
-        $totalPrice = 0;
-        $productHtml = "";
-        foreach ($cart as $k => $v) {
-            if (in_array($k, array('html', 'total'))) {
-                continue;
-            }
-            if (!empty($v['name'])) {
-                $total += $v['qty'];
-                $totalPrice += $v['price'] * $v['qty'];
-                $_price = number_format($v['price']);
-                $_link = $this->BASE_URL . '/san-pham/' . $v['url'];
-                $productHtml .= "<li class='product-info' data-id='{$v['id']}'>
-                    <div class='p-left'>
-                        <a href='{$_link}'>
-                            <img class='img-responsive' src='{$v['image']}' alt='{$v['name']}'>
-                        </a>
-                    </div>
-                    <div class='p-right'>
-                        <p class='p-name'>{$v['name']}</p>
-                        <p class='p-rice'>{$_price}đ</p>
-                        <p>Số lượng: {$v['qty']}</p>
-                    </div>
-                </li>";
-            }
-        }
-        $cart['total'] = $total;
-        $html = "<div class='cart-block-content'>
-            <h5 class='cart-title'>Bạn hiện có {$total} sản phẩm</h5>
-            <div class='cart-block-list'>
-                <ul>
-                    {$productHtml}
-                </ul>
-            </div>
-            <div class='toal-cart'>
-                <span>Tổng tiền</span>
-                <span class='toal-price pull-right'>" . number_format($totalPrice) . "₫</span>
-            </div>
-            <div class='cart-buttons'>
-                <a href='" . $this->BASE_URL . '/thanh-toan' . "' class='btn-check-out'>Thanh toán</a>
-            </div>
-        </div>";
-        $cart['html'] = $html;
-        return $cart;
-    }
-
 }
