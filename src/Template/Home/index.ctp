@@ -14,26 +14,10 @@
 <div class="wrap-middle" style="position: relative">
     <div class="wrap-content">
         <ul class="modern-articles modern-grid">
-            <?php for ($i = 0; $i < 20; $i++): ?>
-                <li class="sticky hentry" id="post-8060">
-                    <div class="content-art">
-                        <div class="sticky-art"><i class="fa fa-bookmark"></i></div>                    
-                        <a href="https://maclife.vn/microsoft-office-2019-ban-office-moi-nhat-cua-microsoft.html" title="Microsoft Office 2019 – Bộ Office mới nhất của Microsoft [Hỗ trợ Dark Mode]" data-wpel-link="internal"><h2>Microsoft Office 2019 – Bộ Office mới nhất của Micr ..</h2></a>
-                        <span class="meta-art">
-                            <a href="https://maclife.vn/mac-application/business" data-wpel-link="internal">Business</a>                     
-                        </span>
-                        <div class="box-image">
-                            <a href="https://maclife.vn/microsoft-office-2019-ban-office-moi-nhat-cua-microsoft.html" data-wpel-link="internal"><img width="300" height="186" src="https://maclife.vn/wp-content/uploads/2019/03/Microsoft-Office-2019-Mac-300x186.png" class="attachment-showcase_wp_thumbnail-blog size-showcase_wp_thumbnail-blog wp-post-image" alt="" title=""></a>
-                        </div><!-- end .box-image -->
-                        <div class="home-meta">
-                            <div class="an-display-time">Dec 9, 2019</div>      
-                            <div class="home-data">
-                                <div class="thumbs-rating-container" id="thumbs-rating-8060" data-content-id="8060"><span class="thumbs-rating-up thumbs-rating-voted" onclick="thumbs_rating_vote(8060, 1);"><i class="fa fa-thumbs-o-up"></i> 67</span> <span class="thumbs-rating-down thumbs-rating-voted" onclick="thumbs_rating_vote(8060, 2);"><i class="fa fa-thumbs-o-down"></i> 21</span><span class="thumbs-rating-already-voted" data-text="You already voted!"></span></div>                        </div><!-- end .home-data -->                        
-                            <div class="clear"></div> 
-                        </div><!-- Meta ( time and comments ) --> 
-                    </div><!-- end .content-art -->
-                </li>
-            <?php endfor; ?>
+            <?php if (!empty($data['home_posts']['data'])):?>
+            <?php foreach ($data['home_posts']['data'] as $hp): ?>
+                <?php echo $this->element('item_post_list', array('post' => $hp));?>
+            <?php endforeach; endif;?>
         </ul>
         <div class="clear"></div>
         <div class="wp-pagenavi" role="navigation">
