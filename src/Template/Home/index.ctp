@@ -20,21 +20,7 @@
             <?php endforeach; endif;?>
         </ul>
         <div class="clear"></div>
-        <div class="wp-pagenavi" role="navigation">
-            <span class="pages">Page 1 of 90</span>
-            <span aria-current="page" class="current">1</span>
-            <a class="page larger" title="Page 2" href="https://maclife.vn/page/2" data-wpel-link="internal">2</a>
-            <a class="page larger" title="Page 3" href="https://maclife.vn/page/3" data-wpel-link="internal">3</a>
-            <a class="page larger" title="Page 4" href="https://maclife.vn/page/4" data-wpel-link="internal">4</a>
-            <a class="page larger" title="Page 5" href="https://maclife.vn/page/5" data-wpel-link="internal">5</a>
-            <span class="extend">...</span>
-            <a class="larger page" title="Page 10" href="https://maclife.vn/page/10" data-wpel-link="internal">10</a>
-            <a class="larger page" title="Page 20" href="https://maclife.vn/page/20" data-wpel-link="internal">20</a>
-            <a class="larger page" title="Page 30" href="https://maclife.vn/page/30" data-wpel-link="internal">30</a>
-            <span class="extend">...</span>
-            <a class="nextpostslink" rel="next" href="https://maclife.vn/page/2" data-wpel-link="internal">»</a>
-            <a class="last" href="https://maclife.vn/page/90" data-wpel-link="internal">Last »</a>
-        </div>
+        <?php echo $this->Paginate->render($data['home_posts']['total'], $params['limit']); ?>
     </div>
 
     <div class="sidebar-wrapper">

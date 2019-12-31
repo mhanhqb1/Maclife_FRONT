@@ -66,18 +66,17 @@ class PaginateHelper extends AppHelper {
             $start = 1;
             $end = $totalPage;
         }
-        $html = '<div class="col-md-12 content_sortPagiBar pagi">';
-        $html .= '<div id="pagination" class="clearfix">';
-        $html .= '<ul class="pagination paging">';
+        $html = '<div class="wp-pagenavi" role="navigation">';
+        $html .= '<span class="pages">Page '.$page.' of '.$totalPage.'</span>';
         if ($end > 1) {
             for ($i = $start; $i <= $end; $i++) {
                 if ($i == $page) {
-                    $nav .= "<li class=\"active\"><a href=\"#\">{$i}<span class='sr-only'>(current)</span></a></li>";
+                    $nav .= "<span aria-current='page' class='current'>{$i}</span>";
                 } else {
                     if (!empty($function)) {
                         $nav .= "<li><a onclick='".$function."({$i})'>{$i}</a></li>";
                     } else {
-                        $nav .= "<li><a href='" . $url . "page={$i}'>{$i}</a></li>";
+                        $nav .= "<a class='page larger' title='Page {$i}' href='{$url}page={$i}' data-wpel-link='internal'>{$i}</a>";
                     }
                 }
             }
@@ -85,7 +84,7 @@ class PaginateHelper extends AppHelper {
                 if (!empty($function)) {
                     $prev = "<li class=\"prev\"><a onclick='".$function."(".($page - 1).")'>← </a></li>";
                 } else {
-                    $prev = "<li><a href='" . $url . "page=" . ($page - 1) . "' aria-label='Previous'><span aria-hidden='true'>Trước</span></a></li>";
+                    $prev = "<a class='first' href='{$url}page=".($page - 1)."' data-wpel-link='internal'>« Prev</a>";
                 }
             } else {
                 $prev = "";
@@ -94,7 +93,7 @@ class PaginateHelper extends AppHelper {
                 if (!empty($function)) {
                     $next = "<li class=\"next\"><a onclick='".$function."(".($page + 1).")'> →</a></li>";
                 } else {
-                    $next = "<li><a href='" . $url . "page=" . ($page + 1) . "'  aria-label='Next'><span aria-hidden='true'>Sau</span></a></li>";
+                    $next = "<a class='first' href='{$url}page=".($page + 1)."' data-wpel-link='internal'>Next »</a>";
                 }
             } else {
                 $next = "";
