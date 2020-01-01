@@ -9,36 +9,21 @@ namespace App\Controller;
 use App\Lib\Api;
 use Cake\Core\Configure;
 
-class CatesController extends AppController {
+class SearchController extends AppController {
     /**
      * List cate
      */
     public function index() {
         // Init
-        $ids = array();
-        $rootId = '';
-        $cateName = '';
         $limit = 24;
-        $cates = !empty($this->_settings['cates']) ? $this->_settings['cates'] : array();
         
-        // Get cate id
-        foreach ($cates as $c) {
-            if ($c['slug'] == $slug) {
-                $cateName = $c['name'];
-                $ids[] = $c['id'];
-                $rootId = $c['id'];
-            }
-            if (!empty($rootId) && $c['parent_id'] == $rootId) {
-                $ids[] = $c['id'];
-            }
-        }
         $params = $this->getParams(array(
-            'cate_id' => implode(',', $ids),
             'limit' => $limit,
             'get_tags' => 1,
             'page' => 1
         ));
-        $pageTitle = $cateName;
+        $cateName = !empty($params['s']) ? $params['s'] : '';
+        $pageTitle = 'Tìm kiếm: '.$cateName;
         
         // Call API
         $result = Api::call(Configure::read('API.url_posts_list'), $params);
