@@ -12,11 +12,8 @@ Configure::write('API.rewriteUrl', array());
 Configure::write('API.url_settings_general', 'settings/general');
 Configure::write('API.url_settings_gethomedata', 'settings/gethomedata');
 
-Configure::write('API.url_products_all', 'products/all');
-Configure::write('API.url_products_list', 'products/list');
-Configure::write('API.url_products_detail', 'products/detail');
-
 Configure::write('API.url_posts_list', 'posts/list');
+Configure::write('API.url_posts_all', 'posts/all');
 Configure::write('API.url_posts_detail', 'posts/detail');
 
 Configure::write('API.url_orders_addupdate', 'orders/addupdate');

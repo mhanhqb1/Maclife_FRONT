@@ -135,7 +135,7 @@
                         </li>
                         <li class="tab_title">
                             <a href="#" id="comments-9-tab">
-                                <i class="fa fa-comment-o"></i> Comments				
+                                <i class="fa fa-thumbs-o-up"></i> Top like				
                             </a>
                         </li>
                     </ul> <!--end .tabs-->
@@ -150,7 +150,7 @@
                         </div><!--end .tab-content-->
                         <div class="wpt_acc_title">
                             <a href="#" id="comments-9-tab">
-                                <i class="fa fa-comment-o"></i> Comments				
+                                <i class="fa fa-comment-o"></i> Top like				
                             </a>
                         </div>
                         <div id="comments-9-tab-content" class="tab-content"></div><!--end .tab-content-->
@@ -172,6 +172,8 @@
             </div>
             <div class="clear"></div>	  	
         </aside>
+        <div class="clear"></div>
     </div>    <!-- end #sidebar (right) --> 
     <div class="clear"></div>
 </div>
+<div class="clear"></div>

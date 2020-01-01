@@ -54,12 +54,12 @@ $version = time();
         
         <script type="text/javascript">
             /* <![CDATA[ */
-            var wpt = {"ajax_url": "http://front.maclife.localhost/html/ajax.php"};
+            var wpt = {"ajax_url": "<?php echo $BASE_URL;?>/ajax/post"};
             /* ]]> */
         </script>
         <script type="text/javascript">
             /* <![CDATA[ */
-            var thumbs_rating_ajax = {"ajax_url": "http://front.maclife.localhost/html/ajax.php", "nonce": "97f4068092"};
+            var thumbs_rating_ajax = {"ajax_url": "<?php echo $BASE_URL;?>/ajax/post"};
             /* ]]> */
         </script>
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/jquery_main.js"></script>

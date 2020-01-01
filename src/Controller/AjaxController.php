@@ -32,7 +32,7 @@ class AjaxController extends AppController {
     /**
      * Update cart
      */
-    public function updatecart() {
-        include ('Bus/Ajax/updatecart.php');
+    public function post() {
+        include ('Bus/Ajax/post.php');
     }
 }
