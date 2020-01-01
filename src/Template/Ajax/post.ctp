@@ -6,8 +6,8 @@
     <?php endif; ?>
 </ul>
 <div class="clear"></div>
-<div class="wpt-pagination">
+<!--<div class="wpt-pagination">
     <a href="#" class="next"><span>Next &raquo;</span></a>
-</div>                   
+</div>                   -->
 <div class="clear"></div>
 <input type="hidden" class="page_num" name="page_num" value="1" />

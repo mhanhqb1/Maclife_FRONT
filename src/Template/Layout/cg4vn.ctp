@@ -47,7 +47,7 @@ $version = time();
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/jquery.js"></script>
     </head>
 
-    <body>
+    <body id="<?php echo $controller;?>">
         <?php echo $this->element('Layout/header');?>
         <?php echo $this->fetch('content'); ?>
         <?php echo $this->element('Layout/footer');?>
