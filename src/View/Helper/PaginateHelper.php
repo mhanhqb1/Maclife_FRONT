@@ -66,9 +66,10 @@ class PaginateHelper extends AppHelper {
             $start = 1;
             $end = $totalPage;
         }
-        $html = '<div class="wp-pagenavi" role="navigation">';
-        $html .= '<span class="pages">Page '.$page.' of '.$totalPage.'</span>';
+        $html = '';
         if ($end > 1) {
+            $html = '<div class="wp-pagenavi" role="navigation">';
+            $html .= '<span class="pages">Page '.$page.' of '.$totalPage.'</span>';
             for ($i = $start; $i <= $end; $i++) {
                 if ($i == $page) {
                     $nav .= "<span aria-current='page' class='current'>{$i}</span>";
@@ -102,12 +103,12 @@ class PaginateHelper extends AppHelper {
             $html .= "{$prev}";
             $html .= "{$nav}";
             $html .= "{$next}";
+            $html .= '</ul>';
+            $html .= '</div>';
+            $html .= '</div>';
         }
 
-        $html .= '</ul>';
         
-        $html .= '</div>';
-        $html .= '</div>';
         return $html;
     }
 
