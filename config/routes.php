@@ -54,7 +54,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/bai-viet/*', ['controller' => 'Cates', 'action' => 'detail']);
+    $routes->connect('/bai-viet/*', ['controller' => 'Posts', 'action' => 'index']);
     $routes->connect('/danh-muc/*', ['controller' => 'Cates', 'action' => 'index']);
     $routes->connect('/tim-kiem/*', ['controller' => 'Search', 'action' => 'index']);
 

@@ -35,4 +35,12 @@ class AjaxController extends AppController {
     public function post() {
         include ('Bus/Ajax/post.php');
     }
+    
+    /**
+     * Update cart
+     */
+    public function postview() {
+        $this->autoRender = false;
+        include ('Bus/Ajax/postview.php');
+    }
 }
