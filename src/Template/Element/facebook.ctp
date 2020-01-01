@@ -16,4 +16,5 @@
             <div class="fb-page" data-animclass="fadeIn " data-href="<?php echo $_settings['company']['facebook']; ?>" data-hide-cover=false data-width="300" data-height="" data-show-facepile=true  data-show-posts=false data-adapt-container-width=true data-hide-cta=false data-small-header="false"></div> 
         </div>
     </div>
+    <div class="clear"></div>
 <?php endif; ?>
