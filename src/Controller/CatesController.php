@@ -13,17 +13,17 @@ class CatesController extends AppController {
     /**
      * List cate
      */
-    public function index($url = '') {
+    public function index($slug = '') {
         // Init
         $ids = array();
         $rootId = '';
         $cateName = '';
-        $limit = 18;
-        $cates = !empty($this->_settings['blog_cates']) ? $this->_settings['blog_cates'] : array();
+        $limit = 24;
+        $cates = !empty($this->_settings['cates']) ? $this->_settings['cates'] : array();
         
         // Get cate id
         foreach ($cates as $c) {
-            if ($c['url'] == $url) {
+            if ($c['slug'] == $slug) {
                 $cateName = $c['name'];
                 $ids[] = $c['id'];
                 $rootId = $c['id'];
@@ -32,36 +32,35 @@ class CatesController extends AppController {
                 $ids[] = $c['id'];
             }
         }
-        $param = array(
+        $params = $this->getParams(array(
             'cate_id' => implode(',', $ids),
             'limit' => $limit,
-            'get_new_posts' => 1,
-            'disable' => 0
-        );
+            'get_tags' => 1,
+            'page' => 1
+        ));
         $pageTitle = $cateName;
         
         // Call API
-        $result = Api::call(Configure::read('API.url_posts_list'), $param);
-        $data = !empty($result['data']) ? $result['data'] : array();
-        $total = !empty($result['total']) ? $result['total'] : 0;
-        $newPosts = !empty($result['new_posts']) ? $result['new_posts'] : array();
+        $result = Api::call(Configure::read('API.url_posts_list'), $params);
+        $data['home_posts']['data'] = !empty($result['data']) ? $result['data'] : array();
+        $data['home_posts']['total'] = !empty($result['total']) ? $result['total'] : 0;
+        $data['home_tags'] = !empty($result['tags']) ? $result['tags'] : array();
         
         // Set data
         $this->set(compact(
             'data',
             'limit',
             'total',
-            'param',
+            'params',
             'cateName',
-            'pageTitle',
-            'newPosts'
+            'pageTitle'
         ));
     }
     
     /**
      * Cate detail
      */
-    public function detail($url = '') {
+    public function detail($slug = '') {
         $data = array();
         $pageImage = '';
         $pageTitle = '';
@@ -69,9 +68,9 @@ class CatesController extends AppController {
         $pageKeyword = '';
         $newPosts = array();
 
-        if (!empty($url)) {
-            $data = Api::call(Configure::read('API.url_posts_detail'), array(
-                'url' => $url,
+        if (!empty($slug)) {
+            $data = Api::call(Configure::read('API.slug_posts_detail'), array(
+                'slug' => $slug,
                 'get_new_posts' => 1
             ));
             $newPosts = !empty($data['new_posts']) ? $data['new_posts'] : array();

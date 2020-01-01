@@ -1,75 +1,124 @@
-<div id="collection">
-    <div class="columns-container">
-        <div class="container" id="columns">
-            <!--breadcrumb-->
-            <div class="breadcrumb clearfix">
-                <div class="tfsBreadcrumb ">
-                    <ol class="breadcrumb breadcrumb-arrow hidden-sm hidden-xs">
-                        <li><a href="<?php echo $BASE_URL;?>" target="_self">Trang chủ</a></li>
-                        <li class="active"><span><?php echo $cateName; ?></span></li>
-                    </ol>
-                </div>
-            </div>
-            <!--/breadcrumb-->
-            <div class="row">
-                <!-- Left colunm -->
-                <?php 
-                echo $this->element('Layout/cate_left', array(
-                    'newPosts' => $newPosts,
-                    'cateName' => $cateName
-                ));
-                ?>
-                <!--/left_column-->
-                <!--right_column-->
-                <div class="center_column col-xs-12 col-sm-9 product-col" id="center_column">
-                    <h2 class="page-heading">
-                        <span class="page-heading-title2"><?php echo $cateName;?></span>
-                    </h2>
-                    <!--blog-posts-->
-                    <ul class="blog-posts">
-                        <?php if (!empty($data)): ?>
-                        <?php foreach ($data as $v): ?>
-                        <li class="post-item">
-                            <article class="entry">
-                                <div class="row">
-                                    <div class="col-sm-5">
-                                        <div class="entry-thumb image-hover2 text-center" data-gtm-vis-has-fired-2408055_54="1">
-                                            <a href="<?php echo $BASE_URL.'/bai-viet/'.$v['url'];?>">
-                                                <img src="<?php echo $v['image'];?>" alt="<?php echo $v['name'];?>">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        <div class="entry-ci">
-                                            <h3 class="entry-title"><a href="#"><?php echo $v['name'];?></a></h3>
-                                            <div class="entry-meta-data">
-                                                <span class="cat">
-                                                    <i class="fa fa-folder-o"></i>
-                                                    <a href="<?php echo $BASE_URL.'/tin-tuc'.$v['cate_url'];?>"><?php echo $v['cate_name'];?></a>
-                                                </span>
-                                                <span class="date"><i class="fa fa-calendar"></i> <?php echo date('d-m-Y', $v['created']);?></span>
-                                            </div>
-                                            <div class="entry-excerpt">
-                                                <?php echo $v['description'];?>
-                                            </div>
-                                            <div class="entry-more">
-                                                <a href="<?php echo $BASE_URL.'/bai-viet/'.$v['url'];?>">Xem thêm</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                        </li>
-                        <?php endforeach; ?>
-                        <?php endif; ?>
-                    </ul>
-                    <!--/blog-posts-->
-                    <div class="sortPagiBar clearfix">
-                        <?php echo $this->Paginate->render($total, $limit); ?>
-                    </div>
-                </div>
-                <!--/right_column-->
-            </div>
+<section class="front-overlay-content">
+    <div class="front-overlay-wrap">
+        <h1><span>Nhập nội dung cần tìm và Enter</span></h1>                
+        <div class="search-box">
+            <form id="searchform2" class="header-search" method="get" action="<?php echo $BASE_URL;?>/tim-kiem">
+                <input placeholder="Nhap noi dung can tim" type="text" name="s" id="s">
+                <input type="submit" value="Search" class="buttonicon">
+            </form>
+            <div class="clear"></div>
         </div>
+    </div><!-- end .front-overlay-wrap -->
+</section>
+
+<div class="wrap-middle" style="position: relative">
+    <div class="wrap-content">
+        <h3 class="index-title">All posts in: <?php echo $cateName;?></h3>
+        <ul class="modern-articles modern-grid">
+            <?php if (!empty($data['home_posts']['data'])):?>
+            <?php foreach ($data['home_posts']['data'] as $hp): ?>
+                <?php echo $this->element('item_post_list', array('post' => $hp));?>
+            <?php endforeach; endif;?>
+        </ul>
+        <div class="clear"></div>
+        <?php echo $this->Paginate->render($data['home_posts']['total'], $params['limit']); ?>
     </div>
+
+    <div class="sidebar-wrapper">
+        <aside id="sidebar" class="sb-right">
+            <div class="widget widget_wpt">
+                <div id="wpt_widget-3_content" data-widget-number="3" class="wpt_widget_content wpt-load8" data-style="" data-pagination-style="">
+                    <div class="wpt-loader"></div>
+                    <ul class="wpt-tabs has-3-tabs">
+                        <li class="tab_title">
+                            <a href="#" id="popular-tab">
+                                <i class="fa fa-area-chart"></i> Top 7 days				
+                            </a>
+                        </li>
+                        <li class="tab_title">
+                            <a href="#" id="popular-3-tab">
+                                <i class="fa fa-area-chart"></i> Top 30 days				
+                            </a>
+                        </li>
+                        <li class="tab_title">
+                            <a href="#" id="popular-10-tab">
+                                <i class="fa fa-area-chart"></i> All times				
+                            </a>
+                        </li>
+                    </ul> <!--end .tabs-->
+                    <div class="clear"></div>
+                    <div class="inside">
+                        <div class="wpt_acc_title">
+                            <a href="#" id="popular-tab">
+                                <i class="fa fa-area-chart"></i> Top 7 days				
+                            </a>
+                        </div>
+                        <div id="popular-tab-content" class="tab-content">
+                        </div><!--end .tab-content-->
+                        <div class="wpt_acc_title">
+                            <a href="#" id="popular-3-tab">
+                                <i class="fa fa-area-chart"></i> Top 30 days				
+                            </a>
+                        </div>
+                        <div id="popular-3-tab-content" class="tab-content">
+                        </div><!--end .tab-content-->
+                        <div class="wpt_acc_title">
+                            <a href="#" id="popular-10-tab">
+                                <i class="fa fa-area-chart"></i> All times				
+                            </a>
+                        </div>
+                        <div id="popular-10-tab-content" class="tab-content">
+                        </div><!--end .tab-content-->
+                        <div class="clear"></div>
+                    </div> <!--end .inside -->
+                    <div class="clear"></div>			
+                </div><!--end .wpt_widget_content -->
+            </div>
+            <div class="clear"></div>
+            <?php echo $this->element('facebook');?>
+            <div class="clear"></div>			
+            <div class="widget widget_wpt">
+                <div id="wpt_widget-4_content" data-widget-number="4" class="wpt_widget_content wpt-load8" data-style="" data-pagination-style="">
+                    <div class="wpt-loader"></div>
+                    <ul class="wpt-tabs has-2-tabs">
+                        <li class="tab_title">
+                            <a href="#" id="latest-tab">
+                                <i class="fa fa-archive"></i> Mới cập nhật				
+                            </a>
+                        </li>
+                        <li class="tab_title">
+                            <a href="#" id="comments-9-tab">
+                                <i class="fa fa-thumbs-o-up"></i> Top like				
+                            </a>
+                        </li>
+                    </ul> <!--end .tabs-->
+                    <div class="clear"></div>
+                    <div class="inside">
+                        <div class="wpt_acc_title">
+                            <a href="#" id="latest-tab">
+                                <i class="fa fa-archive"></i> Mới cập nhật				
+                            </a>
+                        </div>
+                        <div id="latest-tab-content" class="tab-content">
+                        </div><!--end .tab-content-->
+                        <div class="wpt_acc_title">
+                            <a href="#" id="comments-9-tab">
+                                <i class="fa fa-comment-o"></i> Top like				
+                            </a>
+                        </div>
+                        <div id="comments-9-tab-content" class="tab-content"></div><!--end .tab-content-->
+                        <div class="clear"></div>
+                    </div> <!--end .inside -->
+                    <div class="clear"></div>			
+                </div><!--end .wpt_widget_content -->
+            </div>
+            <div class="clear"></div>			
+            <?php if (!empty($data['home_tags'])): ?>
+            <?php echo $this->element('list_home_tag', array('tags' => $data['home_tags']));?>
+            <?php endif;?>
+        </aside>
+        <div class="clear"></div>
+    </div>    <!-- end #sidebar (right) --> 
+    <div class="clear"></div>
 </div>
+<div class="clear"></div>
