@@ -22,7 +22,8 @@ class PostsController extends AppController {
 
         if (!empty($slug)) {
             $data = Api::call(Configure::read('API.url_posts_detail'), array(
-                'slug' => $slug
+                'slug' => $slug,
+                'get_related_posts' => 1
             ));
             $pageImage = !empty($data['image']) ? $data['image'] : '';
             $pageTitle = !empty($data['name']) ? $data['name'] : '';
