@@ -13,7 +13,7 @@
         <div class="home-meta">
             <div class="an-display-time"><?php echo date('d-m-Y', $post['created']);?></div>      
             <div class="home-data">
-                <div class="thumbs-rating-container" data-content-id="<?php echo $post['id'];?>">
+                <div class="thumbs-rating-container" id="thumbs-rating-<?php echo $post['id'];?>" data-content-id="<?php echo $post['id'];?>">
                     <span class="thumbs-rating-up thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $post['id'];?>, 1);"><i class="fa fa-thumbs-o-up"></i> <?php echo !empty($post['total_like']) ? $post['total_like'] : 0;?></span> 
                     <span class="thumbs-rating-down thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $post['id'];?>, 2);"><i class="fa fa-thumbs-o-down"></i> <?php echo !empty($post['total_dislike']) ? $post['total_dislike'] : 0;?></span>
                     <span class="thumbs-rating-already-voted" data-text="You already voted!"></span>
