@@ -9,8 +9,8 @@
                         <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $data['cate_slug'];?>" data-wpel-link="internal"><?php echo $data['cate_name'];?></a>
                         <div class="single-thumb">
                             <div class="thumbs-rating-container" id="thumbs-rating-<?php echo $data['id']; ?>" data-content-id="<?php echo $data['id']; ?>">
-                                <span class="thumbs-rating-up thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $data['id']; ?>, 1);"><i class="fa fa-thumbs-o-up"></i> <?php echo $data['total_like']; ?></span> 
-                                <span class="thumbs-rating-down thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $data['id']; ?>, 2);"><i class="fa fa-thumbs-o-down"></i> <?php echo $data['total_dislike']; ?></span>
+                                <span class="thumbs-rating-up thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $data['id']; ?>, 1);"><i class="fa fa-thumbs-o-up"></i> <?php echo !empty($data['total_like']) ? $data['total_like'] : 0; ?></span> 
+                                <span class="thumbs-rating-down thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $data['id']; ?>, 2);"><i class="fa fa-thumbs-o-down"></i> <?php echo !empty($data['total_dislike']) ? $data['total_dislike'] : 0; ?></span>
                                 <span class="thumbs-rating-already-voted" data-text="You already voted!"></span>
                             </div>
                         </div><!-- end .home-data -->
