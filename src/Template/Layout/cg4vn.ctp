@@ -46,9 +46,12 @@ $_favicon = !empty($_settings['company']['favicon']) ? $_settings['company']['fa
         <link rel="stylesheet" href="<?php echo $BASE_URL;?>/css/custom.css?<?php echo $version; ?>" type="text/css" media="all">
         
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/jquery.js"></script>
+        
+        <?php echo !empty($_settings['company']['script_header']) ? $_settings['company']['script_header'] : '';?>
     </head>
 
     <body id="<?php echo $controller;?>">
+        <?php echo !empty($_settings['company']['script_body']) ? $_settings['company']['script_body'] : '';?>
         <?php echo $this->element('Layout/header');?>
         <?php echo $this->fetch('content'); ?>
         <?php echo $this->element('Layout/footer');?>
@@ -67,5 +70,6 @@ $_favicon = !empty($_settings['company']['favicon']) ? $_settings['company']['fa
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/wp_tab.js"></script>
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/thumb_rate.js"></script>
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/custom.js?<?php echo $version;?>"></script>
+        <?php echo !empty($_settings['company']['script_footer']) ? $_settings['company']['script_footer'] : '';?>
     </body>
 </html>
