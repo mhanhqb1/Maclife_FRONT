@@ -5,11 +5,12 @@ $_keyword = !empty($pageKeyword) ? $pageKeyword : $_settings['company']['seo_key
 $_title = !empty($pageTitle) ? $pageTitle : $_settings['company']['name'];
 $_image = !empty($pageImage) ? $pageImage : $_settings['company']['seo_image'];
 $version = time();
+$_favicon = !empty($_settings['company']['favicon']) ? $_settings['company']['favicon'] : $BASE_URL.'/favicon.ico';
 ?>
 <!DOCTYPE html>
 <html lang="vi" itemscope itemtype="http://schema.org/Article" prefix="og: http://ogp.me/ns#">
     <head>
-        <link rel="shortcut icon" href="<?php echo $BASE_URL;?>/favicon.ico" type="image/png">
+        <link rel="shortcut icon" href="<?php echo $_favicon;?>" type="image/png">
         <meta charset="utf-8">
         <title>
             <?php echo $_title; ?>
