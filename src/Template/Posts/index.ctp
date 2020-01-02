@@ -120,6 +120,14 @@
         </div>
 
         <div class="clear"></div>
+        
+        <div class="comments" id="comments">
+            <div class="comments-title"><i class="fa fa-comments"></i> Comments</div>
+            <div class="clear"></div>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=245530479242476&autoLogAppEvents=1"></script>
+            <div class="fb-comments" data-href="<?php echo $BASE_URL;?>/bai-viet/<?php echo $post['slug'];?>" data-width="100%" data-numposts="10"></div>
+        </div>
     </div>
             
     <div class="sidebar-wrapper">
