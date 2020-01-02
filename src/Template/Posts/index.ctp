@@ -107,8 +107,11 @@
                 </div>
                 <div id="tab4" class="tab_content">
                     <div class="ct-size">
-                        <a href="<?php echo $BASE_URL; ?>" rel="tag" data-wpel-link="internal">apple T2</a>
-                        <a href="<?php echo $BASE_URL; ?>" rel="tag" data-wpel-link="internal">Sua loi tren Mac</a>
+                        <?php if (!empty($data['front_tags'])): ?>
+                        <?php foreach ($data['front_tags'] as $t):?>
+                        <a href="<?php echo $BASE_URL; ?>/tag/<?php echo $t['slug'];?>" rel="tag" data-wpel-link="internal"><?php echo $t['name'];?></a>
+                        <?php endforeach;?>
+                        <?php endif;?>
                     </div>
                     <div class="clear"></div>
                     <div class="clear"></div>
