@@ -9,42 +9,28 @@ namespace App\Controller;
 use App\Lib\Api;
 use Cake\Core\Configure;
 
-class CatesController extends AppController {
+class TagController extends AppController {
     /**
      * List cate
      */
     public function index($slug = '') {
         // Init
-        $ids = array();
-        $rootId = '';
         $cateName = '';
         $limit = 24;
-        $cates = !empty($this->_settings['cates']) ? $this->_settings['cates'] : array();
-        
-        // Get cate id
-        foreach ($cates as $c) {
-            if ($c['slug'] == $slug) {
-                $cateName = $c['name'];
-                $ids[] = $c['id'];
-                $rootId = $c['id'];
-            }
-            if (!empty($rootId) && $c['parent_id'] == $rootId) {
-                $ids[] = $c['id'];
-            }
-        }
         $params = $this->getParams(array(
-            'cate_id' => implode(',', $ids),
+            'tag_slug' => $slug,
             'limit' => $limit,
-            'get_tags' => 1,
-            'page' => 1
+            'page' => 1,
+            'get_tags' => 1
         ));
-        $pageTitle = $cateName;
         
         // Call API
         $result = Api::call(Configure::read('API.url_posts_list'), $params);
         $data['home_posts']['data'] = !empty($result['data']) ? $result['data'] : array();
         $data['home_posts']['total'] = !empty($result['total']) ? $result['total'] : 0;
         $data['home_tags'] = !empty($result['tags']) ? $result['tags'] : array();
+        $cateName = !empty($result['data'][0]['tag_name']) ? $result['data'][0]['tag_name'] : $slug;
+        $pageTitle = $cateName;
         
         // Set data
         $this->set(compact(

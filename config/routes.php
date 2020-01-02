@@ -57,6 +57,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/bai-viet/*', ['controller' => 'Posts', 'action' => 'index']);
     $routes->connect('/danh-muc/*', ['controller' => 'Cates', 'action' => 'index']);
     $routes->connect('/tim-kiem/*', ['controller' => 'Search', 'action' => 'index']);
+    $routes->connect('/tag/*', ['controller' => 'Tag', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.
