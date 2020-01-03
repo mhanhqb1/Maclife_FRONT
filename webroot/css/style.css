@@ -860,7 +860,7 @@ ul.minus-black-list         { margin:20px 40px; list-style-type: none;}
 
 
 /* -- Title and article page issue Version: 2.6 - May 07, 2019 -- */
-ul.modern-articles li h2    { overflow-wrap: break-word; word-wrap: break-word; } 
+ul.modern-articles li h2    { overflow-wrap: break-word; word-wrap: break-word;  color: #bababa}
 .entry p                    { overflow-wrap: break-word; word-wrap: break-word; }
 ul.modern-articles li p     { overflow-wrap: break-word; word-wrap: break-word; }
 .fb_iframe_widget_fluid_desktop iframe { background: #fff !important; }
