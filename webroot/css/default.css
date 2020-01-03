@@ -39,7 +39,7 @@ body.page-template-template-full-width .wrap-fullwidth  { background-color: #FFF
 .default-page-content      { background-color: #FFF; border-bottom: 1px solid #dfdfdf; border-top: 3px solid #43acc4; -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
 
 /* - Single-content - */
-.single-content article    { background-color: #212121; }
+.single-content article    { background-color: #0e0e0e; }
 
 /*-----------------------------------------------------------------------------
 ----------------------------- 2 - Header --------------------------------------
@@ -216,7 +216,7 @@ ul.author-social-top li.twitter a  { background-color: #40a4ff;}
 ul.author-social-top li.google a   { background-color: #d34836;} 
 
 /* -- Tabs -- */
-#tabs_content_container    { background-color: #212121;}
+#tabs_content_container    { background-color: #0e0e0e;}
 #tabs_container            { }
 #tabs li a                 { background-color: #060606; color: #FFF; }
 #tabs li a:hover           { color: #FFF !important;}
