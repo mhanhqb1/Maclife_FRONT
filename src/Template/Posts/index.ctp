@@ -120,7 +120,11 @@
         </div>
 
         <div class="clear"></div>
-        
+        <style>
+            iframe body{
+                color: #bababa;
+            }
+        </style>
         <div class="comments" id="comments">
             <div class="comments-title"><i class="fa fa-comments"></i> Comments</div>
             <div class="clear"></div>
