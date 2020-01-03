@@ -22,7 +22,7 @@ a:hover                    { color: #43acc4; /* blue color */ /* Demo colors: #d
 ::selection                { background:#000; color: #fff; text-shadow: none; }
 
 /* -- Header -- */
-html body                  { color: #9f9f9f; }
+html body                  { color: #fff; }
 /*
 body.home, 
 body.archive,
@@ -240,7 +240,7 @@ h3.index-title  { color: #FFF !important; background-color: #43acc4; }
 footer .widget-title h3 { color: #000;}
 
 /* -- Article widget -- */
-ul.article_list            { border-top: 1px solid #f1f1f1; background-color: #FFF; }
+ul.article_list            { border-top: 1px solid #f1f1f1; background-color: #373737; }
 ul.article_list li         { border-bottom: 1px solid #dfdfdf; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1); box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
 ul.article_list li .author-il div.link-author a { color: #000; border-bottom: 1px solid #ffd800;}
 ul.article_list li .author-il div.time-article a { color: #000; border-bottom: 1px solid #ffd800;}
