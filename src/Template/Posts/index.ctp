@@ -30,7 +30,7 @@
                         <?php echo $data['detail']; ?>
                     </div>
                     <div class="post-meta">Cập nhật lần cuối: <?php echo date('d-m-Y H:i:s', $data['updated']); ?></div>
-                    <div id="author-bio-box" style="background: #f8f8f8; border-top: 2px solid #588093; border-bottom: 2px solid #588093; color: #333333">
+                    <div id="author-bio-box" style="background: #212121; border-top: 2px solid #588093; border-bottom: 2px solid #588093; color: #333333">
                         <h3>
                             <a style="color: #025a7f;" href="<?php echo $BASE_URL; ?>" title="<?php echo $_settings['company']['author_name']; ?>" rel="author" data-wpel-link="internal"><?php echo $_settings['company']['author_name']; ?></a>
                         </h3>
