@@ -9,7 +9,7 @@
     height: auto;
 }
 .wpt_widget_content a, .wptp_widget_content a {
-    color: #bababa;
+    color: #fff;
     text-decoration: none;
 }
 .wptp_widget_content ul { margin: 0!important }

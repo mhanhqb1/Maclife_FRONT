@@ -1,22 +1,22 @@
 /* ( default color ) ---------------------------------------------------------
 -----------------------------------------------------------------------------*/
-h1,h2,h3,h4,h5,h6          { color: #bababa;}
+h1,h2,h3,h4,h5,h6          { color: #fff;}
 code, pre                  { border: 1px solid #eae9e9; background-color: #FFF; -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1); box-shadow: 0 1px 10px rgba(0,0,0,0.1);}
 input, textarea, select    { border-left: 3px solid #43acc4; }
 
 span{
-    color: #bababa !important;
+    color: #fff !important;
 }
 ._491z{
-    color: #bababa !important;
+    color: #fff !important;
 }
 ._50f7{
-    color: #bababa !important;
+    color: #fff !important;
 }
 /*-----------------------------------------------------------------------------
 ----------------------------- 1 - Layout --------------------------------------
 -----------------------------------------------------------------------------*/
-a:link, a:visited          { color: #bababa; text-decoration: none; }
+a:link, a:visited          { color: #fff; text-decoration: none; }
 a:hover                    { color: #43acc4; /* blue color */ /* Demo colors: #dd3333 (red); #a3b745 (green); #0983bf  (blue) */ }
 ::-moz-selection           { background:#000; color: #fff; text-shadow: none; }
 ::selection                { background:#000; color: #fff; text-shadow: none; }
@@ -127,7 +127,7 @@ ul.modern-articles li .sticky-art i { color: #43acc4;}
 ul.modern-articles li:hover h2 { color: #43acc4;}
 /* -- Sticky Posts style -- */
 ul.modern-articles li.sticky  {  background-color: rgba(67, 172, 196, 0.1); }
-ul.modern-articles li.sticky .home-meta { border-top: 1px solid #212121; }
+ul.modern-articles li.sticky .home-meta { border-top: 1px solid #a1a1a1; }
 /* - Meta - */
 ul.modern-articles li .home-meta { border-top: 1px solid #f1f1f1; }
 ul.modern-articles li .an-display-time  { color: #43acc4;}
@@ -169,8 +169,8 @@ ul#home10 div.home10-thumb { background-color: #FFF; border: 1px solid #dfdfdf; 
 -----------------------------------------------------------------------------*/
 
 /* - title - */
-h1.article-title           { color: #bababa; }
-h1.page-title              { color: #bababa; border-bottom: 1px solid #f1f1f1; }
+h1.article-title           { color: #fff; }
+h1.page-title              { color: #fff; border-bottom: 1px solid #f1f1f1; }
 
 /* - featured img / videos - */
 .single-content article    { border-bottom: 1px solid #dfdfdf; border-top: 3px solid #43acc4; -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
@@ -386,5 +386,5 @@ ul.footer-social li a:hover   { color: #FFF !important; }
 #back-top span                { background-color: #43acc4;}
 
 iframe body{
-    color: #bababa !important;
+    color: #fff !important;
 }
