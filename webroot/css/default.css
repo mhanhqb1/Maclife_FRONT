@@ -119,7 +119,7 @@ ul#featured-articles li .home-data      { background-color: #FFF; -moz-box-shado
 
 /* ##### Modern Articles ############# 
 ################################### */
-ul.modern-articles li    { background-color: #FFF; border-bottom: 1px solid #dfdfdf; border-top: 3px solid #43acc4; -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1); box-shadow: 0 1px 4px rgba(0,0,0,0.1);}          
+ul.modern-articles li    { background-color: #FFF; border-bottom: 1px solid #212121; border-top: 3px solid #43acc4; -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1); box-shadow: 0 1px 4px rgba(0,0,0,0.1);}
 ul.modern-articles li .box-image   { /* background-color: #f6f7f9; */ }
 ul.modern-articles li span.meta-art a { color: #43acc4;}
 ul.modern-articles li p  { color: #888; }
@@ -127,7 +127,7 @@ ul.modern-articles li .sticky-art i { color: #43acc4;}
 ul.modern-articles li:hover h2 { color: #43acc4;}
 /* -- Sticky Posts style -- */
 ul.modern-articles li.sticky  {  background-color: rgba(67, 172, 196, 0.1); }
-ul.modern-articles li.sticky .home-meta { border-top: 1px solid rgba(223, 223, 223, 0.3); }
+ul.modern-articles li.sticky .home-meta { border-top: 1px solid #212121; }
 /* - Meta - */
 ul.modern-articles li .home-meta { border-top: 1px solid #f1f1f1; }
 ul.modern-articles li .an-display-time  { color: #43acc4;}
