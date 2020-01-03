@@ -39,7 +39,7 @@ body.page-template-template-full-width .wrap-fullwidth  { background-color: #FFF
 .default-page-content      { background-color: #FFF; border-bottom: 1px solid #dfdfdf; border-top: 3px solid #43acc4; -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
 
 /* - Single-content - */
-.single-content article    { background-color: #7B7D7D; }
+.single-content article    { background-color: #656565; }
 
 /*-----------------------------------------------------------------------------
 ----------------------------- 2 - Header --------------------------------------
@@ -75,7 +75,7 @@ ul.cat-4cols li { color: #43acc4; }
 ############################### */
 .featured-articles-overlay-content h1     { color: #FFF;} 
 .featured-articles-overlay-content h1 span{  color: #FFF; }
-.featured-articles-overlay-wrap        { background-color: #7B7D7D; }
+.featured-articles-overlay-wrap        { background-color: #656565; }
 ul#featured-articles li:hover h2,
 ul#featured-articles li a h2 { color: #FFF;}
 ul#featured-articles div.home10-thumb { background-color: #FFF; border: 1px solid #dfdfdf; -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.1); box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
@@ -216,7 +216,7 @@ ul.author-social-top li.twitter a  { background-color: #40a4ff;}
 ul.author-social-top li.google a   { background-color: #d34836;} 
 
 /* -- Tabs -- */
-#tabs_content_container    { background-color: #7B7D7D;}
+#tabs_content_container    { background-color: #656565;}
 #tabs_container            { }
 #tabs li a                 { background-color: #060606; color: #FFF; }
 #tabs li a:hover           { color: #FFF !important;}
@@ -349,7 +349,7 @@ form.wpcf7-form .wpcf7-validation-errors { color: red;}
 ------------------------------ 9 - Footer -------------------------------------
 -----------------------------------------------------------------------------*/
 
-footer                        { background-color: #7B7D7D;}
+footer                        { background-color: #656565;}
 .social-section               { background-color: #43acc4; -moz-box-shadow: 0 1px 5px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.1); box-shadow: 0 1px 5px rgba(0,0,0,0.1);}
 .wrap-footer                  { background-color: #FFF; border-top: 1px solid #f5f5f5;}
 .footer-navigation            { background-color: #060606;}
