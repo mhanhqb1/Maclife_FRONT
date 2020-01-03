@@ -265,9 +265,9 @@ ul.article_list li:hover h3 { color: #43acc4;}
 h3 a.rsswidget      { color: #FFF !important;}
 
 /* -- Default Tags -- */
-div.tagcloud          { border-top: 1px solid #f1f1f1; background-color: #FFF;}
+div.tagcloud          { border-top: 1px solid #212121; background-color: #FFF;}
 div.tagcloud a:hover  { }
-div.tagcloud a        { border-bottom: 1px solid #dfdfdf; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1); box-shadow: 0 1px 2px rgba(0,0,0,0.1);  }
+div.tagcloud a        { border-bottom: 1px solid #212121; -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.1); box-shadow: 0 1px 2px rgba(0,0,0,0.1);  }
 div.tagcloud span     { color: #43acc4; }
 
 /* -- Default Widget Select -- */
