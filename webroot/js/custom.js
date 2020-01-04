@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
     });
 
     // Sticky Sidebar
-    jQuery('#sidebar, #small-sidebar').stick_in_parent({parent: '.wrap-fullwidth, .wrap-middle', spacer: '.sidebar-wrapper'});
+    jQuery('#small-sidebar').stick_in_parent({parent: '.wrap-fullwidth, .wrap-middle', spacer: '.sidebar-wrapper'});
 
 
     // Auto Height Articles
