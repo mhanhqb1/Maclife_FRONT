@@ -762,4 +762,11 @@ ul.footer-social li span      { display: none;}
 
 .one_fourth, .one_fourth_last     { float:left; width:100%; margin-bottom:10px; margin-right:0; }
 .one_fourth_last                  { margin-right:0;}
+.sp{
+    display: block;
+}
+.pc{
+    display: none;
+}
+
 }

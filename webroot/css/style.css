@@ -867,3 +867,9 @@ ul.modern-articles li p     { overflow-wrap: break-word; word-wrap: break-word; 
 ._491z{
 	color: #fff !important;
 }
+.sp{
+	display: none;
+}
+.pc{
+	display: block;
+}

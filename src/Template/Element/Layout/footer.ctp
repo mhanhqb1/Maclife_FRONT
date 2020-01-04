@@ -22,7 +22,7 @@
             <?php endforeach; ?>
             <?php endif; ?>
             <div class="clear"></div>
-            <div class="company-info">
+            <div class="company-info pc">
                 <p><?php echo $_settings['company']['footer_description'];?></p>
             </div>
         </div>
@@ -38,6 +38,9 @@
                 Content by <a href="<?php echo $BASE_URL;?>" data-wpel-link="internal"><?php echo $_settings['company']['author_name'];?></a>          
             </div>
         </div><!-- end .wrap -->
+    </div>
+    <div class="company-info sp">
+        <p><?php echo $_settings['company']['footer_description'];?></p>
     </div>
     <div class="clear"></div>
     <p id="back-top" style="display: block;"><a href="#top"><span></span></a></p>
