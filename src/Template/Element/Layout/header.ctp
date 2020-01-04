@@ -35,7 +35,7 @@
                 <nav class="nav-showcase_wp">
                     <ul>
                         <li class="menu-item current-menu-item">
-                            <a href="<?php echo $BASE_URL;?>" aria-current="page" data-wpel-link="internal">Trang chủ</a>
+                            <a href="<?php echo $BASE_URL;?>" aria-current="page" data-wpel-link="internal">HOME</a>
                         </li>
                         <?php if (!empty($_cates)):?>
                         <?php foreach ($_cates as $cate): ?>
