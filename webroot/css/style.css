@@ -873,3 +873,74 @@ ul.modern-articles li p     { overflow-wrap: break-word; word-wrap: break-word; 
 .pc{
 	display: block;
 }
+.login-box, .register-box {
+	width: 360px;
+	margin: 7% auto;
+}
+.login-logo, .register-logo {
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 25px;
+	font-weight: 300;
+}
+.login-box-body, .register-box-body {
+	background: #fff;
+	padding: 20px;
+	border-top: 0;
+	color: #666;
+}
+.has-feedback {
+	position: relative;
+}
+.form-group {
+	margin-bottom: 15px;
+}
+.form-control {
+	display: block;
+	width: 100%;
+	height: 34px;
+	padding: 6px 12px;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+.form-control:not(select) {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.has-feedback .form-control {
+	padding-right: 42.5px;
+}
+.form-control-feedback {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	display: block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	pointer-events: none;
+}
+.btn{
+	padding: 5px 10px;
+	color: #fff;
+	display: block;
+}
+.btn-primary {
+	background-color: #3c8dbc;
+	border-color: #367fa9;
+}
+.required-color{
+	display: block;
+	color: #FF0F00 !important;
+}
+.has-error{
+	border: 1px solid #FF0F00;
+}
