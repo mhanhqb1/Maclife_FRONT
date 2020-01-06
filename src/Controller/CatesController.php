@@ -28,7 +28,7 @@ class CatesController extends AppController {
         $ids = array();
         $rootId = '';
         $cateName = '';
-        $limit = 24;
+        $limit = 32;
         $cates = !empty($this->_settings['cates']) ? $this->_settings['cates'] : array();
         
         // Get cate id

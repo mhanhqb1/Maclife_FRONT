@@ -26,7 +26,7 @@ class HomeController extends AppController {
     public function index() {
         $data = array();
         $params = $this->getParams(array(
-            'limit' => 24,
+            'limit' => 32,
             'page' => 1
         ));
         $data = Api::call(Configure::read('API.url_settings_gethomedata'), $params);

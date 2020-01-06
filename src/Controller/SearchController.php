@@ -25,7 +25,7 @@ class SearchController extends AppController {
      */
     public function index() {
         // Init
-        $limit = 24;
+        $limit = 32;
         
         $params = $this->getParams(array(
             'limit' => $limit,

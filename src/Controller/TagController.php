@@ -26,7 +26,7 @@ class TagController extends AppController {
     public function index($slug = '') {
         // Init
         $cateName = '';
-        $limit = 24;
+        $limit = 32;
         $params = $this->getParams(array(
             'tag_slug' => $slug,
             'limit' => $limit,
