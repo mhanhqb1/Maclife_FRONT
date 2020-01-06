@@ -8,8 +8,18 @@ namespace App\Controller;
 
 use App\Lib\Api;
 use Cake\Core\Configure;
+use Cake\Event\Event;
 
 class TagController extends AppController {
+     /**
+     * Before filter event
+     * @param Event $event
+     */
+    public function beforeFilter(Event $event) {
+        parent::beforeFilter($event);
+        $this->Auth->allow();
+    }
+    
     /**
      * List cate
      */

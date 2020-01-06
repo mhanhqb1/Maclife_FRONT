@@ -243,8 +243,8 @@ if ($env == 'production') {
     include_once ('development/bootstrap.php');
 }
 
-define('DEFAULT_SITE_TITLE', 'Con Là Tất Cả');
+define('DEFAULT_SITE_TITLE', 'CG4VN');
 if (!defined('USE_SUB_DIRECTORY')) {
     define('USE_SUB_DIRECTORY', '');
 }
-Configure::write('Config.cartSessionKey', 'LyonaBeauty.Com.CartSessionKey');
+Configure::write('Config.CookieExpires', 60*60*24*7);

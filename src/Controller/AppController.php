@@ -40,6 +40,8 @@ class AppController extends Controller {
     public $current_url = '';
     public $BASE_URL = '';
     public $_settings = array();
+    
+    public $AppUI = null;
 
     /**
      * Initialization hook method.
@@ -55,6 +57,21 @@ class AppController extends Controller {
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
+        $this->loadComponent('Cookie', [
+            'expires' => Configure::read('Config.CookieExpires'),
+            'httpOnly' => true
+        ]);
+        
+        $this->loadComponent('Auth', array(
+            'loginRedirect' => false,
+            'logoutRedirect' => false,
+            'loginAction' => array(
+                'controller' => 'users',
+                'action' => 'login',
+                'plugin' => null
+            ),
+            'sessionKey' => 'Auth.cg4vn'
+        ));
 
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -111,6 +128,11 @@ class AppController extends Controller {
                 in_array($this->response->type(), ['application/json', 'application/xml'])
         ) {
             $this->set('_serialize', true);
+        }
+        
+        // Auth
+        if (isset($this->Auth) && $this->isAuthorized()) {
+            $this->set('AppUI', $this->Auth->user());
         }
 
         // Set common param
@@ -184,5 +206,26 @@ class AppController extends Controller {
             }
         }
         return $productCates;
+    }
+    
+    /**
+     * Commont function check user is Authorized..
+     * 
+     * 
+     * @param object $user Session user logged.
+     * @return boolean  If true is authorize, and false is unauthorize.
+     */
+    public function isAuthorized($user = null) {
+        if (!isset($this->Auth)) {
+            return false;
+        }
+        if (empty($user)) {
+            $user = $this->Auth->user();
+        }
+        if (!empty($user)) {
+            $this->AppUI = $user;
+            return true;
+        }
+        return false;
     }
 }
