@@ -11,7 +11,7 @@ if ($this->request->is('post')) {
     foreach ($data as $key => $value) {
         $data[$key] = trim($value);
     }
-    $user = Api::call(Configure::read('API.url_customers_login'), $data);
+    $user = Api::call(Configure::read('API.url_users_login'), $data);
     if (Api::getError() || empty($user)) {
         $this->Flash->error('Lỗi! Đăng nhập không thành công');
     } else {

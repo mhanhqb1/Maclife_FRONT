@@ -1,28 +1,38 @@
-<?php echo $this->element('Layout/header_search');?>
-<div class="wrap-middle" style="position: relative">
-    <div class="wrap-content">
-        <h3 class="index-title">ALL POSTS TAGGED IN: <?php echo $cateName;?></h3>
-        <ul class="modern-articles modern-grid">
-            <?php if (!empty($data['home_posts']['data'])):?>
-            <?php foreach ($data['home_posts']['data'] as $hp): ?>
-                <?php echo $this->element('item_post_list', array('post' => $hp));?>
-            <?php endforeach; endif;?>
-        </ul>
-        <div class="clear"></div>
-        <?php echo $this->Paginate->render($data['home_posts']['total'], $params['limit']); ?>
+<div class="wrap-fullwidth">
+    <div class="register-box">
+        <div class="register-logo">
+            <a href="<?php echo $BASE_URL;?>/dang-nhap"><b>Login</b></a>
+        </div>
+        <div class="register-box-body">
+            <?= $this->Form->create(null, array(
+                    'url' => array(
+                        'controller' => 'users',
+                        'action' => 'login'
+                    )
+                ));
+            ?>
+                <?= $this->Form->unlockField('email'); ?>
+                <?= $this->Form->unlockField('password'); ?>
+                <div class="form-group has-feedback">
+                <div class="form-group has-feedback">
+                    <input type="email" class="form-control <?= isset($errors['email']) ? 'has-error' : '' ?>" name="email" placeholder="Email">
+                    <i class="fa fa-envelope form-control-feedback" aria-hidden="true"></i>
+                    <span class="required-color"><?= isset($errors['email']) ? reset($errors['email']) : '' ?></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control <?= isset($errors['password']) ? 'has-error' : '' ?>" name="password" placeholder="Password">
+                    <i class="fa fa-lock form-control-feedback" aria-hidden="true"></i>
+                    <span class="required-color"><?= isset($errors['password']) ? reset($errors['password']) : '' ?></span>
+                </div>
+                <div class="row">
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            <?= $this->Form->end(); ?>
+        </div>
+        <!-- /.form-box -->
     </div>
-
-    <div class="sidebar-wrapper">
-        <aside id="sidebar" class="sb-right">
-            <?php echo $this->element('home_widget');?>
-            <?php echo $this->element('facebook');?>
-            <?php echo $this->element('home_widget_2');?>
-            <?php if (!empty($data['home_tags'])): ?>
-            <?php echo $this->element('list_home_tag', array('tags' => $data['home_tags']));?>
-            <?php endif;?>
-        </aside>
-        <div class="clear"></div>
-    </div>    <!-- end #sidebar (right) --> 
-    <div class="clear"></div>
 </div>
-<div class="clear"></div>
