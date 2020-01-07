@@ -1,7 +1,6 @@
 <?php echo $this->element('Layout/header_search');?>
 <div class="wrap-middle" style="position: relative">
     <div class="wrap-content">
-        <?php if (!empty($AppUI['is_donate'])): ?>
         <h3 class="index-title">All posts in: <?php echo $cateName;?></h3>
         <ul class="modern-articles modern-grid">
             <?php if (!empty($data['home_posts']['data'])):?>
@@ -11,9 +10,6 @@
         </ul>
         <div class="clear"></div>
         <?php echo $this->Paginate->render($data['home_posts']['total'], $params['limit']); ?>
-        <?php else: ?>
-        <h3 class="index-title">Bạn không đủ quyền để xem các bài viết premium. Vui lòng liên hệ Admin.</h3>
-        <?php endif; ?>
     </div>
 
     <div class="sidebar-wrapper">

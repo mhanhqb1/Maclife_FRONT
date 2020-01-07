@@ -29,6 +29,12 @@
                     <div class="itemFullText">
                         <?php echo $data['detail']; ?>
                     </div>
+                    <?php if (!empty($data['is_premium'])): ?>
+                    <h3>Premium content</h3>
+                    <div class="itemFullText" style="margin: 20px 0;">
+                        <?php echo !empty($AppUI['is_donate']) ? $data['premium_content'] : 'Bạn chưa có quyền để xem nội dung này. Vui lòng liên hệ với admin.'; ?>
+                    </div>
+                    <?php endif;?>
                     <div class="post-meta">Cập nhật lần cuối: <?php echo date('d-m-Y H:i:s', $data['updated']); ?></div>
                     <div id="author-bio-box" style="background: #212121; border-top: 2px solid #588093; border-bottom: 2px solid #588093; color: #333333">
                         <h3>
