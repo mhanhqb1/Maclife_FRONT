@@ -30,7 +30,7 @@
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
                     <div class="col-float">
-                        <a href="<?php echo $BASE_URL;?>/register">register</a>
+                        <a href="<?php echo $BASE_URL;?>/register">Register new member</a>
                     </div>
 
                     <!-- /.col -->
