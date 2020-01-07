@@ -633,7 +633,11 @@ ul.cat-4cols li span { display: block; margin-bottom: 10px; }
 header .stickytop          { display: none;} 
 
 /* -- Top social icons -- */
-ul.top-social              { display: none;}
+ul.top-social li             { display: none;}
+ul.top-social li.btn-login {
+    display: block;
+    margin-right: 50px;
+}
 
 /* -- Top Header Menu --
 ##################### */

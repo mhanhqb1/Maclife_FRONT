@@ -30,13 +30,13 @@
                     </li>
                     <?php endif;?>
                     <?php if (!empty($AppUI)): ?>
-                    <li>
+                    <li class="btn-login">
                         <a href="<?php echo $BASE_URL;?>/users/logout" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
                             <i class="fa fa-sign-out" aria-hidden="true"></i>
                         </a>
                     </li>
                     <?php else: ?>
-                    <li>
+                    <li class="btn-login">
                         <a href="<?php echo $BASE_URL;?>/login" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
                             <i class="fa fa-sign-in" aria-hidden="true"></i>
                         </a>
