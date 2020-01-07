@@ -1,6 +1,8 @@
 <li class="sticky hentry" data-post-id="<?php echo $post['id'];?>">
     <div class="content-art">
-        <div class="sticky-art"><i class="fa fa-bookmark"></i></div>                    
+        <?php if (!empty($post['is_premium'])): ?>
+        <div class="sticky-art"><i class="fa fa-bookmark"></i></div>  
+        <?php endif; ?>
         <a href="<?php echo $BASE_URL;?>/bai-viet/<?php echo $post['slug'];?>" title="<?php echo $post['name'];?>" data-wpel-link="internal"><h2><?php echo $post['name'];?></h2></a>
         <span class="meta-art">
             <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $post['cate_slug'];?>" data-wpel-link="internal"><?php echo $post['cate_name'];?></a>                     
