@@ -75,6 +75,24 @@
                         <li class="menu-item">
                             <a href="<?php echo $BASE_URL;?>/premium" aria-current="page" data-wpel-link="internal">Premium</a>
                         </li>
+                        <?php if (!empty($AppUI)): ?>
+                            <li>
+                                <a href="<?php echo $BASE_URL;?>/users/logout" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
+                                    Logout
+                                </a>
+                            </li>
+                        <?php else: ?>
+                            <li>
+                                <a href="<?php echo $BASE_URL;?>/register" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
+                                    Register
+                                </a>
+                            </li>
+                            <li>
+                                <a href="<?php echo $BASE_URL;?>/login" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
+                                    Login
+                                </a>
+                            </li>
+                        <?php endif; ?>
                     </ul>            
                     <div class="nav-bars"><i class="fa fa-bars"></i></div>
                 </nav><!-- end #myjquerymenu -->
