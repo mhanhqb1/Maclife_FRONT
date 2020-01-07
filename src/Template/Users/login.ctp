@@ -1,7 +1,7 @@
 <div class="wrap-fullwidth">
     <div class="register-box">
         <div class="register-logo">
-            <a href="<?php echo $BASE_URL;?>/dang-nhap"><b>Login</b></a>
+            <a href="<?php echo $BASE_URL;?>/login"><b>Login</b></a>
         </div>
         <div class="register-box-body">
             <?= $this->Form->create(null, array(
@@ -26,9 +26,13 @@
                 </div>
                 <div class="row">
                     <!-- /.col -->
-                    <div class="col-xs-4">
+                    <div class="col-float">
                         <button type="submit" class="btn btn-primary">Login</button>
                     </div>
+                    <div class="col-float">
+                        <a href="<?php echo $BASE_URL;?>/register" class="btn btn-primary">register</a>
+                    </div>
+
                     <!-- /.col -->
                 </div>
             <?= $this->Form->end(); ?>

@@ -37,11 +37,6 @@
                     </li>
                     <?php else: ?>
                     <li>
-                        <a href="<?php echo $BASE_URL;?>/register" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
-                            Register
-                        </a>
-                    </li>
-                    <li>
                         <a href="<?php echo $BASE_URL;?>/login" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
                             Login
                         </a>
