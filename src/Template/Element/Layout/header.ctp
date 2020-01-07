@@ -32,13 +32,13 @@
                     <?php if (!empty($AppUI)): ?>
                     <li>
                         <a href="<?php echo $BASE_URL;?>/users/logout" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
-                            Logout
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
                         </a>
                     </li>
                     <?php else: ?>
                     <li>
                         <a href="<?php echo $BASE_URL;?>/login" class="btn btn-login" data-wpel-link="external" rel="nofollow external noopener noreferrer">
-                            Login
+                            <i class="fa fa-sign-in" aria-hidden="true"></i>
                         </a>
                     </li>
                     <?php endif; ?>
