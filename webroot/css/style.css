@@ -877,6 +877,7 @@ ul.modern-articles li p     { overflow-wrap: break-word; word-wrap: break-word; 
 	width: 360px;
 	margin: 7% auto;
     padding: 20px 0 0 0;
+    background: #656565;
     border-radius: 5px;
 	overflow: hidden;
 }
