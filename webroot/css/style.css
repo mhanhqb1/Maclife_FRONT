@@ -876,6 +876,8 @@ ul.modern-articles li p     { overflow-wrap: break-word; word-wrap: break-word; 
 .login-box, .register-box {
 	width: 360px;
 	margin: 7% auto;
+    padding: 20px 0 0 0;
+    background: #656565;
 }
 .login-logo, .register-logo {
 	font-size: 25px;
@@ -884,7 +886,6 @@ ul.modern-articles li p     { overflow-wrap: break-word; word-wrap: break-word; 
 	font-weight: 300;
 }
 .login-box-body, .register-box-body {
-	background: #fff;
 	padding: 20px;
 	border-top: 0;
 	color: #666;
