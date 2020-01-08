@@ -105,7 +105,6 @@ class PaginateHelper extends AppHelper {
             $html .= "{$next}";
             $html .= '</ul>';
             $html .= '</div>';
-            $html .= '</div>';
         }
 
         
