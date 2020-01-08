@@ -347,7 +347,7 @@ h1.page-title              { padding-bottom: 5px; margin-bottom: 20px; display: 
 .media-single-content      { margin-bottom: 15px; }
 .media-single-content div.meta-art { display: inline-block; font-size: 18px; padding-top: 5px; margin: 5px 0 15px 0; }
 .media-single-content div.meta-art a { float: right;}
-.media-single-content .single-thumb      { width: auto; float: right; margin: 4px 25px 0 20px; }
+.media-single-content .single-thumb      { width: auto; float: right; margin: 0 25px 0 20px; }
 .media-single-content .single-thumb .thumbs-rating-container .thumbs-rating-up, 
 .media-single-content .single-thumb .thumbs-rating-container .thumbs-rating-down { font-size: 16px; padding: 0 0 0 10px; font-weight: bold; } 
 .media-single-content .single-date { float: left; }
