@@ -7,6 +7,7 @@
         <span class="meta-art">
             <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $post['cate_slug'];?>" data-wpel-link="internal"><?php echo $post['cate_name'];?></a>                     
         </span>
+        <div class="fb-share-button" data-href="https://cg4vn.net/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcg4vn.net%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">share</a></div>
         <div class="box-image">
             <a href="<?php echo $BASE_URL;?>/bai-viet/<?php echo $post['slug'];?>" data-wpel-link="internal">
                 <img width="300" height="186" src="<?php echo $post['image'];?>" class="attachment-showcase_wp_thumbnail-blog size-showcase_wp_thumbnail-blog wp-post-image" alt="" title="">
