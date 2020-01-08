@@ -8,7 +8,7 @@
                         <div class="single-date"><?php echo date('d-m-Y', $data['created']); ?></div>
                         <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $data['cate_slug'];?>" data-wpel-link="internal"><?php echo $data['cate_name'];?></a>
                         <div class="single-thumb">
-                            <div class="fb-share-button" data-href="https://cg4vn.net/" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcg4vn.net%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">share</a></div>
+                            <div class="fb-share-button" data-href="https://cg4vn.net/bai-viet/red-giant-shooter-suite-13112-[win-mac]" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcg4vn.net%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">share</a></div>
                         </div><!-- end .home-data -->
                     </div><!-- end .meta-art --> 
                     <div class="clear"></div>
