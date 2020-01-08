@@ -68,7 +68,7 @@
                         <?php endforeach; ?>
                         <?php endif; ?>
                         <li class="menu-item">
-                            <a href="<?php echo $BASE_URL;?>/premium" aria-current="page" data-wpel-link="internal">Premium</a>
+                            <a href="<?php echo $BASE_URL;?>/premium" aria-current="page" data-wpel-link="internal" style="color: #FFD700 !important;">Premium</a>
                         </li>
                     </ul>            
                     <div class="nav-bars"><i class="fa fa-bars"></i></div>

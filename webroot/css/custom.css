@@ -7,7 +7,8 @@
 }
 
 .front-overlay-content {
-    background: url(https://maclife.vn/wp-content/uploads/2018/06/search-background-1.jpeg);
+    background-image: url(https://maclife.vn/wp-content/uploads/2018/06/search-background-1.jpeg);
+    background-repeat: no-repeat;
 }
 
 .front-overlay-wrap {
