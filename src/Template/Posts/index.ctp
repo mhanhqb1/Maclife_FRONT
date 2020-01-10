@@ -8,11 +8,7 @@
                         <div class="single-date"><?php echo date('d-m-Y', $data['created']); ?></div>
                         <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $data['cate_slug'];?>" data-wpel-link="internal"><?php echo $data['cate_name'];?></a>
                         <div class="single-thumb">
-                            <div class="thumbs-rating-container" id="thumbs-rating-<?php echo $data['id']; ?>" data-content-id="<?php echo $data['id']; ?>">
-                                <span class="thumbs-rating-up thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $data['id']; ?>, 1);"><i class="fa fa-thumbs-o-up"></i> <?php echo !empty($data['total_like']) ? $data['total_like'] : 0; ?></span> 
-                                <span class="thumbs-rating-down thumbs-rating-voted" onclick="thumbs_rating_vote(<?php echo $data['id']; ?>, 2);"><i class="fa fa-thumbs-o-down"></i> <?php echo !empty($data['total_dislike']) ? $data['total_dislike'] : 0; ?></span>
-                                <span class="thumbs-rating-already-voted" data-text="You already voted!"></span>
-                            </div>
+                            <div class="fb-share-button" data-href="https://cg4vn.net/bai-viet/<?php echo $slug ?>" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcg4vn.net%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">share</a></div>
                         </div><!-- end .home-data -->
                     </div><!-- end .meta-art --> 
                     <div class="clear"></div>

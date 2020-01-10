@@ -47,7 +47,8 @@ class PostsController extends AppController {
             'pageImage',
             'pageTitle',
             'pageDescription',
-            'pageKeyword'
+            'pageKeyword',
+            'slug'
         ));
     }
 }
