@@ -29,6 +29,8 @@ class PostsController extends AppController {
         $pageTitle = '';
         $pageDescription = '';
         $pageKeyword = '';
+        $cateName = '';
+        $cateParentId = '';
 
         if (!empty($slug)) {
             $data = Api::call(Configure::read('API.url_posts_detail'), array(
@@ -37,6 +39,8 @@ class PostsController extends AppController {
                 'get_tags' => 1,
                 'get_top_like_posts' => 1
             ));
+            $cateName = !empty($data['cate_name']) ? $data['cate_name'] : '';
+            $cateParentId = !empty($data['cate_parent_id']) ? $data['cate_parent_id'] : '';
             $pageImage = !empty($data['image']) ? $data['image'] : '';
             $pageTitle = !empty($data['name']) ? $data['name'] : '';
             $pageDescription = !empty($data['seo_description']) ? $data['seo_description'] : '';
@@ -48,7 +52,9 @@ class PostsController extends AppController {
             'pageTitle',
             'pageDescription',
             'pageKeyword',
-            'slug'
+            'slug',
+            'cateName',
+            'cateParentId'
         ));
     }
 }
