@@ -28,6 +28,7 @@ class CatesController extends AppController {
         $ids = array();
         $rootId = '';
         $cateName = '';
+        $cateParentId = '';
         $limit = 32;
         $cates = !empty($this->_settings['cates']) ? $this->_settings['cates'] : array();
         
@@ -37,6 +38,7 @@ class CatesController extends AppController {
                 $cateName = $c['name'];
                 $ids[] = $c['id'];
                 $rootId = $c['id'];
+                $cateParentId = $c['parent_id'];
             }
             if (!empty($rootId) && $c['parent_id'] == $rootId) {
                 $ids[] = $c['id'];
@@ -62,7 +64,8 @@ class CatesController extends AppController {
             'limit',
             'params',
             'cateName',
-            'pageTitle'
+            'pageTitle',
+            'cateParentId'
         ));
     }
     

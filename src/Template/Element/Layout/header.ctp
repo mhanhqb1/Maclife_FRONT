@@ -47,18 +47,18 @@
                 <!-- Navigation Menu -->
                 <nav class="nav-showcase_wp">
                     <ul>
-                        <li class="menu-item current-menu-item">
+                        <li class="menu-item <?php echo $controller == 'home' ? 'current-menu-item' : '';?>">
                             <a href="<?php echo $BASE_URL;?>" aria-current="page" data-wpel-link="internal">HOME</a>
                         </li>
                         <?php if (!empty($_cates)):?>
                         <?php foreach ($_cates as $cate): ?>
-                        <li class="menu-item">
+                        <li class="menu-item <?php echo (!empty($cateName) && $cateName == $cate['data']['name']) || (!empty($cateParentId) && $cateParentId == $cate['data']['id']) ? 'current-menu-item' : '';?>">
                             <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $cate['data']['slug'];?>" data-wpel-link="internal"><?php echo $cate['data']['name'];?></a>
                             <?php if (!empty($cate['child_data'])): ?>
                             <span class="arrow"><i class="fa fa-angle-down"></i></span>
                             <ul class="sub-menu" style="display: none;">
                                 <?php foreach ($cate['child_data'] as $cd): ?>
-                                <li class="menu-item">
+                                <li class="menu-item <?php echo !empty($cateName) && $cateName == $cd['name'] ? 'current-menu-item' : '';?>">
                                     <a href="<?php echo $BASE_URL;?>/danh-muc/<?php echo $cd['slug'];?>" data-wpel-link="internal"><?php echo $cd['name'];?></a>
                                 </li>
                                 <?php endforeach; ?>
@@ -67,7 +67,7 @@
                         </li>
                         <?php endforeach; ?>
                         <?php endif; ?>
-                        <li class="menu-item">
+                        <li class="menu-item <?php echo $controller == 'premium' ? 'current-menu-item' : '';?>">
                             <a href="<?php echo $BASE_URL;?>/premium" aria-current="page" data-wpel-link="internal" style="color: #FFD700 !important;">Premium</a>
                         </li>
                     </ul>            
