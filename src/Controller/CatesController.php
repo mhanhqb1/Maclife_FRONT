@@ -48,7 +48,8 @@ class CatesController extends AppController {
             'cate_id' => implode(',', $ids),
             'limit' => $limit,
             'get_tags' => 1,
-            'page' => 1
+            'page' => 1,
+            'disable' => 0
         ));
         $pageTitle = $cateName;
         
