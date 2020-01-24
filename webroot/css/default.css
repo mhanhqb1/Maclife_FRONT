@@ -5,7 +5,7 @@ code, pre                  { border: 1px solid #eae9e9; background-color: #FFF; 
 input, textarea, select    { border-left: 3px solid #43acc4; }
 
 span{
-    color: #fff !important;
+    color: #fff;
 }
 ._491z{
     color: #fff !important;
