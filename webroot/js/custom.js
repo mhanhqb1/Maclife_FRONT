@@ -88,7 +88,7 @@ jQuery(document).ready(function ($) {
         });
     });
 
-    $('.main_popup').on('click', function(){
+    $('.main_popup, .popup_close').on('click', function(){
         $('.main_popup').hide();
         setCookie('hide_fanpage', 1, 365);
     });
