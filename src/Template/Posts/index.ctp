@@ -25,7 +25,6 @@
                     <div class="itemFullText">
                         <?php echo $data['detail']; ?>
                     </div>
-                    <h3>Download</h3>
                     <div class="itemFullText" style="margin: 20px 0;">
                         <?php if (!empty($data['is_premium'])): ?>
                             <?php echo !empty($AppUI['is_donate']) ? $data['premium_content'] : 'Bạn chưa có quyền để xem nội dung này. Vui lòng liên hệ với admin.'; ?>
