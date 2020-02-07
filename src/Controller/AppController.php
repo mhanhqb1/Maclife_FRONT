@@ -135,6 +135,8 @@ class AppController extends Controller {
             $this->set('AppUI', $this->Auth->user());
         }
 
+        $isCookieFanPage = $this->getCookieFanpage();
+
         // Set common param
         $this->set('session', $this->session);
         $this->set('cookie', $this->Cookie);
@@ -143,6 +145,7 @@ class AppController extends Controller {
         $this->set('current_url', $this->current_url);
         $this->set('BASE_URL', $this->BASE_URL);
         $this->set('isMobile', $this->isMobile());
+        $this->set('isCookieFanPage', $isCookieFanPage);
 
         // Set common data
         $this->set('_settings', $this->_settings);
@@ -150,6 +153,16 @@ class AppController extends Controller {
 
         // Set default layout
         $this->setLayout();
+    }
+
+
+    public function getCookieFanpage(){
+        $is_cookie_fanpage = $this->request->cookie('hide_fanpage');
+
+        if(!empty($is_cookie_fanpage)){
+            return true;
+        }
+        return false;
     }
 
     /**

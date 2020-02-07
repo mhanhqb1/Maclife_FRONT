@@ -30,6 +30,8 @@ class HomeController extends AppController {
             'page' => 1,
             'disable' => 0
         ));
+
+//        $this->Cookie->read('MyCookie');
         $data = Api::call(Configure::read('API.url_settings_gethomedata'), $params);
         $this->set('data', $data);
         $this->set('params', $params);

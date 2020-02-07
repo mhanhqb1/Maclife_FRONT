@@ -55,7 +55,7 @@ $_favicon = !empty($_settings['company']['favicon']) ? $_settings['company']['fa
         <?php echo $this->element('Layout/header');?>
         <?php echo $this->fetch('content'); ?>
         <?php echo $this->element('Layout/footer');?>
-        
+        <?php echo $this->element('popup'); ?>
         <script type="text/javascript">
             /* <![CDATA[ */
             var wpt = {"ajax_url": "<?php echo $BASE_URL;?>/ajax/post"};

@@ -384,7 +384,21 @@ ul.footer-social li a:hover   { color: #FFF !important; }
 
 /* -- Back to Top -- */
 #back-top span                { background-color: #43acc4;}
-
-iframe body{
-    color: #fff !important;
+iframe body{color: #fff !important;}
+.main_popup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+.fanpage_popup{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
