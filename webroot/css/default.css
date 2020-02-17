@@ -4,9 +4,9 @@ h1,h2,h3,h4,h5,h6          { color: #fff;}
 code, pre                  { border: 1px solid #eae9e9; background-color: #FFF; -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.1); -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.1); box-shadow: 0 1px 10px rgba(0,0,0,0.1);}
 input, textarea, select    { border-left: 3px solid #43acc4; }
 
-span{
+/*span{
     color: #fff;
-}
+}*/
 ._491z{
     color: #fff !important;
 }
