@@ -4,7 +4,13 @@
             <div class="wrap">
                 <!-- Logo -->    
                 <a href="<?php echo $BASE_URL;?>" data-wpel-link="internal">
-                    <img class="logo" src="<?php echo $_settings['company']['logo'];?>" alt="<?php echo $_settings['company']['name'];?>">
+                    <img 
+                        class="logo" 
+                        src="<?php echo $_settings['company']['logo'];?>" 
+                        alt="<?php echo $_settings['company']['name'];?>" 
+                        <?php echo !empty($_settings['company']['logo_width']) ? "width='".$_settings['company']['logo_width']."px'" : "";?> 
+                        <?php echo !empty($_settings['company']['logo_height']) ? "height='".$_settings['company']['logo_height']."px'" : "";?>
+                    >
                 </a>
                 <!-- Social Icons -->
                 <ul class="top-social">
