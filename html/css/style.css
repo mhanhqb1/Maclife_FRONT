@@ -104,7 +104,7 @@ body.page-template-default .wrap-middle { margin-bottom: 50px;}
 -----------------------------------------------------------------------------*/
 
 /* -- Logo -- */
-.logo                      { float: left; max-height: 80px; }
+.logo                      { float: left; max-height: 80px; padding-top:5px }
 
 /* -- Search -- */
 #searchform2               { height: auto; margin: 15px auto 0 auto; border-radius: 5px; }
