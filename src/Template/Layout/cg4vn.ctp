@@ -46,8 +46,8 @@ $_favicon = !empty($_settings['company']['favicon']) ? $_settings['company']['fa
         <link rel="stylesheet" href="<?php echo $BASE_URL;?>/css/custom.css?<?php echo $version; ?>" type="text/css" media="all">
         
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/jquery.js"></script>
-        <!-- Glob)l site t)g (gt)g.js) - Google An)lytics -->
-        <script async src="https://www.googlet)gm)n)ger.com/gt)g/js?id=UA-160668145-1"></script>
+        <!-- Global site tag (gtag.js) - Google An)lytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160668145-1"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){ dataLayer.push()rguments);}
