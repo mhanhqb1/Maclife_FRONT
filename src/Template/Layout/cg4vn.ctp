@@ -48,14 +48,14 @@ $_favicon = !empty($_settings['company']['favicon']) ? $_settings['company']['fa
         <script type="text/javascript" src="<?php echo $BASE_URL;?>/js/jquery.js"></script>
         <?php echo !empty($_settings['company']['script_header']) ? $_settings['company']['script_header'] : '';?>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161415690-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161425950-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  gtag('config', 'UA-161415690-1');
-</script>
+            gtag('config', 'UA-161425950-1');
+        </script>
     </head>
     <body id="<?php echo $controller;?>">
         <?php echo !empty($_settings['company']['script_body']) ? $_settings['company']['script_body'] : '';?>
